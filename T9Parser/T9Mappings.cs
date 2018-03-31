@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace T9Parser
 {
-    public class T9Mappings
+    internal static class T9Mappings
     {
         private static readonly Dictionary<int, string> _digitToChar = new Dictionary<int,string>
         {
@@ -14,7 +14,8 @@ namespace T9Parser
             {6, "mno"},
             {7, "pqrs"},
             {8, "tuv"},
-            {9, "wxyz"}
+            {9, "wxyz"},
+            {0, " "}
         };
 
         static T9Mappings()
@@ -26,7 +27,7 @@ namespace T9Parser
                 for (int i = 0; i < keyValuePair.Value.Length; i++)
                 {
                     var key = keyValuePair.Value[i];
-                    var keypress = new Keypress(keyValuePair.Key, i+1);
+                    var keypress = new Keypress(keyValuePair.Key, i+1, key);
                     CharToDigits.Add(key, keypress);
                 }
             }
