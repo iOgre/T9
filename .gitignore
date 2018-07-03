@@ -1,0 +1,10 @@
+*.cache
+T9Parser/bin/
+T9.Test/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+T9.Test/obj/
+T9.Test/bin/
+packages/
+obj/
+.vs/
+.idea/
+bin/
